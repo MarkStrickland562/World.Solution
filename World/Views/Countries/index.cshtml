@@ -1,0 +1,13 @@
+<h1>Countries</h1>
+
+@if (@Model.Count == 0)
+{
+  <h3>No countries have been added yet!</h3>
+}
+
+<h3>Country Code     Name     Continent     Region     Surface Area     Population</h3>
+
+@foreach (var country in Model)
+{
+  <h4>@country.GetCode()     @country.GetName()     @country.GetContinent()     @country.GetRegion()     @country.GetSurface()     @country.GetPopulation()</h4>
+}
